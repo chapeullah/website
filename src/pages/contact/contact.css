@@ -49,7 +49,7 @@
 
   padding: 2px 0;
 
-  color: #000;
+  color: var(--color-text-primary);
   text-decoration: none;
 
   transition:
@@ -78,7 +78,7 @@
   display: block;
   flex-shrink: 0;
 
-  color: #000;
+  color: var(--color-text-secondary);
 }
 
 .contact-page__link-text {
@@ -94,7 +94,7 @@
   font-weight: 500;
   line-height: 1.2;
 
-  color: #777;
+  color: var(--color-text-secondary);
 }
 
 .contact-page__link-value {
@@ -137,8 +137,8 @@
   padding: 5px 0;
 
   background-color: transparent;
-  color: #000;
-  caret-color: #000;
+  color: var(--color-text-primary);
+  caret-color: var(--color-text-primary);
 
   font: inherit;
   font-size: 20px;
@@ -177,7 +177,7 @@
   top: 0;
   left: 0;
 
-  color: #ccc;
+  color: var(--color-text-primary);
 
   font-size: 20px;
 
@@ -196,7 +196,7 @@
 .contact-page__textarea:not(:placeholder-shown) ~ .contact-page__label {
   top: -24px;
 
-  color: #333;
+  color: var(--color-text-secondary);
 
   font-size: 16px;
 }
@@ -209,7 +209,7 @@
   width: 100%;
   height: 2px;
 
-  background-color: #333;
+  background-color: var(--color-text-secondary);
 
   transform: scaleX(0);
   transform-origin: left;
@@ -244,7 +244,7 @@
   justify-items: end;
   align-items: start;
 
-  color: #000;
+  color: var(--color-text-secondary);
   text-align: right;
 
   user-select: none;
@@ -260,7 +260,7 @@
 }
 
 .contact-page__status-line:not(:first-child) {
-  color: #777;
+  color: var(--color-text-tertiary);
 }
 
 .contact-page__status-line--main {

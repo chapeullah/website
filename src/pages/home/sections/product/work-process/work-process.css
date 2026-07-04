@@ -38,8 +38,6 @@
 
 .work-process__step::before {
   content: counter(workProcessCounter, decimal-leading-zero);
-
-  color: black;
 }
 
 .work-process__step-title {
@@ -61,7 +59,7 @@
   font-weight: 400;
   line-height: 1.6;
 
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--color-text-tertiary);
 }
 
 @media (max-width: 1024px) {

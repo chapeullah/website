@@ -44,7 +44,7 @@
 
 .button-selected {
   background-color: var(--subtle-fill-secondary);
-  color: var(--color-accent);
+  color: var(--accent-text-primary);
 }
 
 @media (max-width: 1024px) {

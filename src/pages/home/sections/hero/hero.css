@@ -1,10 +1,4 @@
 :root {
-  --color-accent: #0067b8;
-  --color-accent-hover: #005a9e;
-
-  --color-white: #ffffff;
-  --color-black: #000000;
-
   --button-light-bg: rgba(255, 255, 255, 0.7);
   --button-light-bg-hover: rgba(255, 255, 255, 0.85);
 
@@ -95,7 +89,7 @@
   font-weight: 400;
   line-height: 1.65;
 
-  color: hsla(0, 0%, 0%, 60.63%);
+  color: var(--color-text-tertiary);
 }
 
 .buttons-spacer {

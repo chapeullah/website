@@ -56,8 +56,8 @@ export default function WorkExperience() {
         Опыт работы.
       </h3>
       <p className="section-layout__description">
-        Привет! Я Денис Шамко, разрабатываю прикладные системы, которые помогают переводить ручные процессы
-        в удобные цифровые решения.
+        Развиваюсь в IT-среде, работаю с реальными задачами,
+        командными процессами и техническими требованиями к рабочим системам.
       </p>
       <Divider className='work-experience__divider' />
       <div className="work-experience__content section-layout__split">

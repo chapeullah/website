@@ -1,12 +1,11 @@
 .footer {
   position: relative;
-  min-height: var(--footer-height);
 
-  color: black;
+  color: var(--color-text-tertiary);
   z-index: 1;
 
   margin-top: auto;
-  padding: 0 40px;
+  padding: 36px;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -27,7 +26,7 @@
   width: 15px;
   height: 15px;
 
-  color: black;
+  color: var(--color-text-primary);
 }
 
 .footer__right {
@@ -41,9 +40,23 @@
 
   font-size: 13px;
   font-weight: 400;
-  color: black;
 
   justify-content: flex-end;
 
   transition: color 0.5s ease;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .footer__left {
+    justify-self: center;
+  }
+
+  .footer__right {
+    justify-content: center;
+  }
 }

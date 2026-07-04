@@ -1,5 +1,3 @@
-import './kafka-logo.css';
-
 export default function KafkaLogo({ className = '' }) {
   return (
     <svg

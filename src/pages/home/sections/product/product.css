@@ -1,5 +1,5 @@
 .product__description {
-  padding: var(--spacing-default);
+  padding: var(--inline-spacing-default);
   align-items: center;
 }
 
