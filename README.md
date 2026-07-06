@@ -7,6 +7,7 @@ This repository contains the source code for my personal website, created to pre
 
 ## Installation
 To run this project locally:
+
 **1. Clone the repository:**
 ```bash
 git clone https://github.com/chapeullah/website.git
