@@ -1,18 +1,18 @@
 export const contact = {
   header: {
-    label: "CONTACT",
-    title: "Get in touch.",
+    label: "СВЯЗАТЬСЯ",
+    title: "Связь со мной.",
   },
 
   form: {
-    email: "Your email",
-    message: "Message",
-    send: "Send",
+    email: "Ваша почта",
+    message: "Сообщение",
+    send: "Отправить",
   },
 
   status: {
-    main: "OPEN TO PROJECTS",
-    firstLine: "Custom development",
-    secondLine: "From idea to launch",
+    main: "ОТКРЫТ К ПРОЕКТАМ",
+    firstLine: "Разработка под ключ",
+    secondLine: "От идеи до запуска",
   }
 };
