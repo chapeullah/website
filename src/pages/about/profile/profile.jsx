@@ -1,35 +1,49 @@
-import './profile.css';
+import "./profile.css";
 
-import Divider from '@ui/divider/divider.jsx';
-import MapPinIcon from '@icons/map-pin/map-pin-icon.jsx';
-import { getAge } from '@pages/about/profile/get-age.jsx';
-import { getYearWord } from '@pages/about/profile/get-year-word.jsx';
-import { getExperienceYears } from '@pages/about/profile/get-experience-years.jsx';
+import { useLanguage } from "@i18n/use-language.js";
+import { site } from "@i18n/site.js";
+
+import Divider from "@ui/divider/divider.jsx";
+import MapPinIcon from "@icons/map-pin/map-pin-icon.jsx";
+
+import { getAge } from "@pages/about/profile/get-age.js";
+import { getExperienceYears } from "@pages/about/profile/get-experience-years.js";
+import { formatYears } from "@pages/about/profile/format-years.js";
 
 export default function Profile() {
-  const age = getAge('2002-08-15');
-  const ageText = `${age} ${getYearWord(age)}`;
+  const { t, language } = useLanguage();
+  const i18n = t.aboutSection;
 
-  const experienceYears = getExperienceYears('2024-08-01');
-  const experienceText = `${String(experienceYears).replace('.', ',')}+ ${getYearWord(experienceYears)}`;
+  const age = getAge(site.chupapo.birthDate);
+  const ageText = formatYears(age, language);
+
+  const experienceYears = getExperienceYears(site.chupapo.experienceStartDate);
+  const experienceText = formatYears(experienceYears, language, {
+    plus: true,
+  });
 
   return (
     <section className="profile">
       <div className="profile__main">
-        <h3 className="section-layout__title">Денис Шамко</h3>
+        <h3 className="section-layout__title">
+          {i18n.name}
+        </h3>
 
         <p className="section-layout__description">
-          Программирую прикладные системы для автоматизации ручных процессов.
+          {i18n.description}
         </p>
       </div>
 
       <div className="profile__location">
         <MapPinIcon className="profile__map-pin-icon" />
-        <span>Москва, Россия</span>
+
+        <span>
+          {i18n.location}
+        </span>
       </div>
 
       <p className="profile__age">
-        Возраст: {ageText}
+        {i18n.age.label}: {ageText}
       </p>
 
       <Divider className="profile__divider" />
@@ -37,56 +51,85 @@ export default function Profile() {
       <div className="profile__meta">
         <div className="profile__meta-list">
           <div className="profile__meta-item">
-            <span className="profile__meta-label">Стаж</span>
-            <strong className="profile__meta-value">{experienceText}</strong>
+            <span className="profile__meta-label">
+              {i18n.experience.label}
+            </span>
+
+            <strong className="profile__meta-value">
+              {experienceText}
+            </strong>
           </div>
 
           <div className="profile__meta-item">
-            <span className="profile__meta-label">Фокус</span>
-            <strong className="profile__meta-value">Автоматизация процессов</strong>
+            <span className="profile__meta-label">
+              {i18n.focus.label}
+            </span>
+
+            <strong className="profile__meta-value">
+              {i18n.focus.value}
+            </strong>
           </div>
 
           <div className="profile__meta-item">
-            <span className="profile__meta-label">Языки</span>
-            <strong className="profile__meta-value">Java, C++</strong>
+            <span className="profile__meta-label">
+              {i18n.languages.label}
+            </span>
+
+            <strong className="profile__meta-value">
+              {i18n.languages.value}
+            </strong>
           </div>
         </div>
 
         <div className="profile__contacts">
-          <span className="profile__contacts-title">Contact info</span>
+          <span className="profile__contacts-title">
+            {i18n.contacts.title}
+          </span>
 
-          <a className="profile__meta-item" href="mailto:chapeullah@gmail.com">
-            <span className="profile__meta-label">Email</span>
-            <strong className="profile__meta-value">chapeullah@gmail.com</strong>
+          <a
+            className="profile__meta-item"
+            href={`mailto:${site.contacts.email}`}
+          >
+            <span className="profile__meta-label">
+              {i18n.contacts.email}
+            </span>
+
+            <strong className="profile__meta-value">
+              {site.contacts.email}
+            </strong>
           </a>
 
           <a
             className="profile__meta-item"
-            href="https://t.me/chapeullah"
+            href={site.contacts.telegram.link}
             target="_blank"
             rel="noreferrer noopener"
           >
-            <span className="profile__meta-label">Telegram</span>
-            <strong className="profile__meta-value">@chapeullah</strong>
+            <span className="profile__meta-label">
+              {site.contacts.telegram.label}
+            </span>
+
+            <strong className="profile__meta-value">
+              {site.contacts.telegram.username}
+            </strong>
           </a>
 
           <a
             className="profile__meta-item"
-            href="https://github.com/chapeullah"
+            href={site.contacts.github.link}
             target="_blank"
             rel="noreferrer noopener"
           >
-            <span className="profile__meta-label">GitHub</span>
-            <strong className="profile__meta-value">github.com/chapeullah</strong>
+            <span className="profile__meta-label">
+              {site.contacts.github.label}
+            </span>
+
+            <strong className="profile__meta-value">
+              {site.contacts.github.label}
+            </strong>
           </a>
         </div>
       </div>
     </section>
   );
 }
-
-/*
-  добавить Available for Work
-  добавить скачивание CV / портфолио PDF
-  добавить ссылки на GitHub, почту, Telegram
-*/

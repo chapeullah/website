@@ -600,7 +600,7 @@ export function useAsciiCube(canvasRef) {
       ctx.save();
 
       ctx.textBaseline = 'top';
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.86)';
+      ctx.fillStyle = getComputedStyle(canvas).color;
 
       const asciiWidth = columns * charWidth;
       const asciiHeight = rows * charHeight;

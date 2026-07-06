@@ -2,17 +2,21 @@ import Cube from './cube/cube.jsx';
 
 import './hero.css';
 
-import ContactButton from "./contact-button/contact-button.jsx";
-import GitHubButton from "./github-button/github-button.jsx";
+import ContactButton from "./contact-button.jsx";
+import GitHubButton from "./github-button.jsx";
+import { useLanguage } from '@i18n/use-language.js';
+
+import { site } from '@i18n/site.js';
 
 export default function Hero() {
+  const { t } = useLanguage();
+  const i18n = t.heroSection;
+
   return (
     <section className="hero section" data-cube-tracking-area>
       <div className="hero-left">
-        <h1 className={'hero-left__label'}>Chupapo</h1>
-        <p className={'hero-left__text'}>
-          A software developer building reliable business tools, from backend services and APIs to clean web interfaces and automation.
-        </p>
+        <h1 className={'hero-left__label'}>{site.brand}</h1>
+        <p className={'hero-left__text'}>{i18n.description}</p>
         <div className={'buttons-spacer'}>
           <ContactButton />
           <GitHubButton />

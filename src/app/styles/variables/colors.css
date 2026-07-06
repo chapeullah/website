@@ -1,10 +1,6 @@
 :root {
   /* BASE COLORS */
   --color-bg: hsl(0 0% 95%);
-  --color-white: hsl(0, 0%, 100%);
-  --color-black: hsl(0, 0%, 0%);
-  --color-main: hsl(225, 9%, 17%);
-  --color-primary: hsl(0, 0%, 100%);
 
   /* TEXT COLORS */
   --color-text-primary: hsla(0, 0%, 0%, 89.56%);
@@ -51,7 +47,6 @@
   --control-fill-default: hsla(0, 0%, 100%, 70%);
   --control-fill-secondary: hsla(0, 0%, 98%, 50%);
   --control-fill-tertiary: hsla(0, 0%, 98%, 30%);
-  --control-fill-disabled: hsla(0, 0%, 98%, 30%);
   --control-fill-input-active: hsl(0, 0%, 100%);
 
   --control-strong-fill-default: hsla(0, 0%, 0%, 44.58%);
@@ -183,7 +178,6 @@
   --text-on-accent-selected: hsl(0, 0%, 100%);
 
   /* CONTROL FILLS */
-  --control-fill-transparent: transparent;
   --control-fill-default: hsla(0, 0%, 100%, 6.1%);
   --control-fill-secondary: hsla(0, 0%, 100%, 8.4%);
   --control-fill-tertiary: hsla(0, 0%, 100%, 3.3%);

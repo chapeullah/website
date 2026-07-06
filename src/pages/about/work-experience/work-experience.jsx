@@ -1,9 +1,9 @@
-import './work-experience.css';
+import "./work-experience.css";
 
-import { useLanguage } from '@i18n/use-language.js';
-import Divider from '@ui/divider/divider.jsx';
+import { useLanguage } from "@i18n/use-language.js";
+import Divider from "@ui/divider/divider.jsx";
 
-function ExperienceCard({ experience, technologiesTitle }) {
+function ExperienceCard({ experience }) {
   return (
     <article className="card experience-card">
       <div className="experience-card__body">
@@ -11,25 +11,30 @@ function ExperienceCard({ experience, technologiesTitle }) {
           <div className="experience-card__main">
             <div className="experience-card__role-row">
               <h3 className="experience-card__role">
-                {experience.role}
+                {experience.position}
               </h3>
             </div>
+
             <p className="experience-card__company">
               {experience.company}
             </p>
           </div>
+
           <p className="experience-card__period">
             {experience.period}
           </p>
         </header>
+
         <p className="experience-card__description">
           {experience.description}
         </p>
+
         <div className="experience-card__section">
           <h4 className="experience-card__section-title">
-            {technologiesTitle}
+            {experience.technologiesTitle}
           </h4>
-          <ol className="experience-card__technologies">
+
+          <ul className="experience-card__technologies">
             {experience.technologies.map((technology) => (
               <li
                 className="experience-card__technology"
@@ -38,7 +43,7 @@ function ExperienceCard({ experience, technologiesTitle }) {
                 {technology}
               </li>
             ))}
-          </ol>
+          </ul>
         </div>
       </div>
     </article>
@@ -47,30 +52,35 @@ function ExperienceCard({ experience, technologiesTitle }) {
 
 export default function WorkExperience() {
   const { t } = useLanguage();
-  const workExperienceTexts = t.homepage.about.workExperience;
+  const i18n = t.workExperienceSection;
+
+  const listWorkExperience = i18n.items.map((experience) => (
+    <li
+      className="work-experience__item"
+      key={experience.id}
+    >
+      <ExperienceCard experience={experience} />
+    </li>
+  ));
 
   return (
     <section className="work-experience">
-      <span className="header-chip">Work experience</span>
+      <span className="header-chip">{i18n.header.chip}</span>
+
       <h3 className="section-layout__title">
-        Опыт работы.
+        {i18n.header.title}
       </h3>
+
       <p className="section-layout__description">
-        Развиваюсь в IT-среде, работаю с реальными задачами,
-        командными процессами и техническими требованиями к рабочим системам.
+        {i18n.header.description}
       </p>
-      <Divider className='work-experience__divider' />
+
+      <Divider className="work-experience__divider" />
+
       <div className="work-experience__content section-layout__split">
-        <ol className="work-experience__list section-layout__split-right">
-          {workExperienceTexts.items.map((experience) => (
-            <li className="work-experience__item" key={experience.id}>
-              <ExperienceCard
-                experience={experience}
-                technologiesTitle={workExperienceTexts.technologiesTitle}
-              />
-            </li>
-          ))}
-        </ol>
+        <ul className="work-experience__list section-layout__split-right">
+          {listWorkExperience}
+        </ul>
       </div>
     </section>
   );

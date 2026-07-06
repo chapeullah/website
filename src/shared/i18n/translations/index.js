@@ -1,7 +1,9 @@
-import { ru } from './ru/index.js';
-import { en } from './en/index.js';
+import { ru } from "./ru";
+import { en } from "./en";
+import { site } from "../site.js";
 
 export const translations = {
   ru,
   en,
+  site,
 };

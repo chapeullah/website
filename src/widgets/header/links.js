@@ -1,23 +1,19 @@
 export const homeLink = {
-  id: 'home',
-  label: 'Home',
-  to: '/',
+  id: "home",
+  to: "/",
 };
 
 export const aboutLink = {
-  id: 'about',
-  label: 'About',
-  to: '/about',
+  id: "about",
+  to: "/about",
 };
 
 export const contactLink = {
-  id: 'contact',
-  label: 'Contact',
-  to: '/contact',
+  id: "contact",
+  to: "/contact",
 };
 
 export const githubLink = {
-  id: 'github',
-  label: 'GitHub',
-  href: 'https://github.com/chapeullah',
+  id: "github",
+  href: "https://github.com/chapeullah",
 };

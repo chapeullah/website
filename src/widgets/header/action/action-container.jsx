@@ -1,7 +1,7 @@
 import './action-container.css';
 
-import ContactButton from './contact-button/contact-button.jsx';
-import GitHubButton from './github-button/github-button.jsx';
+import ContactButton from './contact-button.jsx';
+import GitHubButton from './github-button.jsx';
 import MobileMenu from '@widgets/header/action/mobile-menu/mobile-menu.jsx';
 
 export default function ActionContainer() {

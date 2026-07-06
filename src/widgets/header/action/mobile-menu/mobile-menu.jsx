@@ -2,16 +2,18 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import './mobile-menu.css';
-import Button from '@ui/button/index.js';
-import GitHubButton from '@pages/home/sections/hero/github-button/github-button.jsx';
 import ContactIcon from '@icons/contact/contact-icon.jsx';
 import InfoIcon from '@icons/info/info-icon.jsx';
 import HomeIcon from '@icons/home/home-icon.jsx';
-import HomeButton from '@widgets/header/nav/home-button.jsx';
 import GitHubLogo from '@logos/github/github-logo.jsx';
 import Divider from '@ui/divider/divider.jsx';
+import { useLanguage } from '@i18n/use-language.js';
+import { site } from '@i18n/site.js';
 
 export default function MobileMenu() {
+  const { t } = useLanguage();
+  const i18n = t.header;
+
   const [isOpen, setIsOpen] = useState(false);
 
   const handleMenuToggle = () => {
@@ -53,7 +55,7 @@ export default function MobileMenu() {
           onClick={handleMenuClose}
         >
           <HomeIcon className="mobile-menu__link-icon" />
-          <span className="mobile-menu__link-label">Home</span>
+          <span className="mobile-menu__link-label">{i18n.home}</span>
         </NavLink>
 
         <NavLink
@@ -62,7 +64,7 @@ export default function MobileMenu() {
           onClick={handleMenuClose}
         >
           <InfoIcon className="mobile-menu__link-icon" />
-          <span className="mobile-menu__link-label">About</span>
+          <span className="mobile-menu__link-label">{i18n.about}</span>
         </NavLink>
 
         <Divider />
@@ -73,17 +75,20 @@ export default function MobileMenu() {
           onClick={handleMenuClose}
         >
           <ContactIcon className="mobile-menu__link-icon" />
-          <span className="mobile-menu__link-label">Contact</span>
+          <span className="mobile-menu__link-label">{i18n.contact}</span>
         </NavLink>
 
         <a
-          href="https://github.com/chapeullah"
+          href={site.contacts.github.link}
           className="mobile-menu__link"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={handleMenuClose}
         >
           <GitHubLogo className="mobile-menu__link-icon" />
-          <span className="mobile-menu__link-label">GitHub</span>
+          <span className="mobile-menu__link-label">
+            {site.contacts.github.label}
+          </span>
         </a>
       </div>
     </div>

@@ -1,6 +1,6 @@
 export const Languages = [
-  { code: 'ru', title: 'Русский' },
-  { code: 'en', title: 'English' },
+  { code: 'ru', label: 'Русский' },
+  { code: 'en', label: 'English' },
 ];
 
 export const AvailableLanguageCodes = Languages.map((language) => language.code);

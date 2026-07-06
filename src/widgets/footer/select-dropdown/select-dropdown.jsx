@@ -50,8 +50,8 @@ export default function SelectDropdown({
       >
         {icon}
 
-        <span className="select-dropdown__title">
-          {currentItem.title}
+        <span className="select-dropdown__label">
+          {currentItem.label}
         </span>
 
         <CaretIcon className="select-dropdown__caret" />
@@ -74,7 +74,7 @@ export default function SelectDropdown({
                   disabled={item.code === selectedCode}
                   onClick={() => handleItemClick(item.code)}
                 >
-                  {item.title}
+                  {item.label}
                 </button>
               </li>
             ))}

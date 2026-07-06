@@ -8,15 +8,14 @@ import { useLanguage } from "@i18n/use-language.js";
 
 export default function About() {
   const { t } = useLanguage();
-  const aboutTexts = t.homepage.about;
+  const i18n = t.aboutSection;
 
   return (
     <div  className="about-page">
       <div className="about-page__header">
-        <h1 className="about-page__header-label section-layout__header-label">{aboutTexts.headerLabel}</h1>
-        <h2 className="about-page__header-title section-layout__header-title">{aboutTexts.headerTitle}</h2>
+        <h1 className="about-page__header-label section-layout__header-label">{i18n.header.label}</h1>
+        <h2 className="about-page__header-title section-layout__header-title">{i18n.header.title}</h2>
       </div>
-
 
       <Profile />
       <Technologies />

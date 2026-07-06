@@ -1,38 +1,37 @@
-import './service-cards.css';
+import "./service-cards.css";
 
-import { services } from "./services.js";
-import Divider from '@ui/divider/divider.jsx';
-
-const listServices = services.map((service) => {
-  const Icon = service.icon ? service.icon : null;
-  const Description = service.description ? service.description : null;
-
-  return (
-    <article className="card service-card" key={service.name}>
-      {Icon && <Icon className='icon service-card__icon' />}
-      <h3 className='service-card__name'>{service.name}</h3>
-      {Description && <p className='service-card__description'>{Description}</p>}
-    </article>
-  );
-});
+import Divider from "@ui/divider/divider.jsx";
+import { useLanguage } from "@i18n/use-language.js";
+import { serviceItems } from "./service-items.js";
 
 export default function ServiceCards() {
+  const { t } = useLanguage();
+  const i18n = t.serviceSection;
 
+  const listServices = i18n.services.map((service) => {
+    const serviceMeta = serviceItems.find((item) => item.id === service.id);
+    const Icon = serviceMeta?.icon ?? null;
+
+    return (
+      <article className="card service-card" key={service.id}>
+        {Icon && <Icon className="icon service-card__icon" />}
+        <h3 className="service-card__name">{service.title}</h3>
+        {service.description && (
+          <p className="service-card__description">{service.description}</p>
+        )}
+      </article>
+    );
+  });
 
   return (
-    <div className='service-section'>
-      <span className='header-chip'>Services</span>
-      <h3 className="section-layout__title">
-        Автоматизация процессов.
-      </h3>
-      <p className="section-layout__description">
-        Создаю системы, которые превращают ручные процессы в рабочие цифровые решения. Помогаю убрать рутину, связать действия в единую систему и сделать работу быстрее.
-      </p>
+    <div className="service-section">
+      <span className="header-chip">{i18n.header.chip}</span>
+      <h3 className="section-layout__title">{i18n.header.title}</h3>
+      <p className="section-layout__description">{i18n.header.description}</p>
       <Divider variant="horizontal" className="service-cards__divider" />
-      <div className='service-cards'>
+      <div className="service-cards">
         {listServices}
       </div>
     </div>
-
   );
 }

@@ -1,0 +1,34 @@
+export const aboutSection = {
+  header: {
+    label: "ОБО МНЕ",
+    title: "Кто я?",
+  },
+
+  name: "Денис Шамко",
+  description: "Разрабатываю системы на заказ, которые автоматизируют ручные процессы.",
+
+  location: "Москва, Россия",
+
+  age: {
+    label: "Возраст",
+  },
+
+  experience: {
+    label: "Опыт",
+  },
+
+  focus: {
+    label: "Фокус",
+    value: "Автоматизация процессов",
+  },
+
+  languages: {
+    label: "Языки программирования",
+    value: "Java, C++",
+  },
+
+  contacts: {
+    title: "Контактная информация",
+    email: "Почта",
+  },
+};

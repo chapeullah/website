@@ -1,0 +1,1 @@
+export const notFound = "СТРАНИЦА НЕ НАЙДЕНА";
