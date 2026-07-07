@@ -30,7 +30,7 @@ This repository contains the source code for Chupapo website, created to present
 ## Installation
 To run this project locally:
 
-### 1. Clone the repository
+**1. Clone the repository**
 
 ```bash
 git clone https://github.com/chapeullah/website.git
