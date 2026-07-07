@@ -1,7 +1,10 @@
-<h2 align="center">
-  Chupapo Website <br/>
+<h1 align="center">
+  Chupapo Website
+</h1>
+
+<p align="center">
   <a href="https://chupapo.com/">chupapo.com</a>
-</h2>
+</p>
 
 This repository contains the source code for my personal website, created to present my custom **software development services** and introduce myself.
 
