@@ -6,7 +6,7 @@
   <a href="https://chupapo.com/">chupapo.com</a>
 </p>
 
-This repository contains the source code for my personal website, created to present my custom **software development services** and introduce myself.
+This repository contains the source code for Chupapo website, created to present custom **software development services**.
 
 ## Preview
 ![website preview](./assets/preview.png)
