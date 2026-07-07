@@ -8,10 +8,10 @@
 
 This repository contains the source code for Chupapo website, created to present custom **software development services**.
 
-## Preview
+# Preview
 ![website preview](./assets/preview.png)
 
-## Features
+# Features
 
 - Multi-page layout
 - Responsive design
@@ -22,7 +22,7 @@ This repository contains the source code for Chupapo website, created to present
 
 The project follows the Feature-Sliced Design methodology.
 
-## Built With
+# Built With
 
 - React
 - Vite
@@ -30,7 +30,7 @@ The project follows the Feature-Sliced Design methodology.
 - HTML
 - CSS
 
-## Installation
+# Installation
 To run this project locally:
 
 **1. Clone the repository**
