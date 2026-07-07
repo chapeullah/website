@@ -8,21 +8,21 @@
 
 This repository contains the source code for Chupapo website, created to present custom **software development services**.
 
-# Preview
+## Preview
 ![website preview](./assets/preview.png)
 
-# Features
+## Features
 
 - Multi-page layout
 - Responsive design
 - Light & Dark theme support
 - Multi-language localization
 
-# Architecture
+## Architecture
 
 The project follows the Feature-Sliced Design methodology.
 
-# Built With
+## Built With
 
 - React
 - Vite
@@ -30,22 +30,29 @@ The project follows the Feature-Sliced Design methodology.
 - HTML
 - CSS
 
-# Installation
+## Installation
 To run this project locally:
 
-**1. Clone the repository**
+### 1. Clone the repository
+
 ```bash
 git clone https://github.com/chapeullah/website.git
 ```
-**2. Go to the project directory**
+
+### 2. Go to the project directory
+
 ```bash
 cd website
 ```
-**3. Install dependencies**
+
+### 3. Install dependencies
+
 ```bash
 npm install
 ```
-**4. Start the development server**
+
+### 4. Start the development server
+
 ```bash
 npm run dev
 ```
