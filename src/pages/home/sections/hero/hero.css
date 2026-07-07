@@ -134,9 +134,9 @@
   position: relative;
   isolation: isolate;
 
-  width: clamp(360px, 80vmin, 1152px);
-  max-width: calc(100vw - 32px);
-  max-height: calc(100svh - 32px);
+  width: clamp(520px, 45vw, 900px);
+  max-width: 100%;
+  max-height: calc(100svh - var(--header-height) - 64px);
   aspect-ratio: 1 / 1;
 }
 

@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import {
   BaseFontSize,
   CubeMouseTrackingStopSelector,
+  CubeScreenshotMode,
   FixedColumns,
   FixedCubeWidth,
   ProjectionScale,
@@ -25,7 +26,7 @@ import {
   ReturnDeceleration,
   ReturnMaxSpeed,
   ReturnToInitialEpsilon,
-} from './cube-constants.js';
+} from "./cube-constants.js";
 
 import {
   clamp,
@@ -693,6 +694,12 @@ export function useAsciiCube(canvasRef) {
       startAnimation();
     }
 
+    function drawStaticFrame() {
+      clearAsciiBuffers();
+      drawCube(FixedCubeWidth, 0, getProjectionPower());
+      drawAsciiBuffer();
+    }
+
     function resizeCanvas() {
       const rect = canvas.getBoundingClientRect();
 
@@ -870,17 +877,31 @@ export function useAsciiCube(canvasRef) {
     }
 
     resizeCanvas();
+
+    if (CubeScreenshotMode) {
+      drawStaticFrame();
+
+      window.addEventListener("resize", () => {
+        resizeCanvas();
+        drawStaticFrame();
+      });
+
+      return () => {
+        stopAnimation();
+      };
+    }
+
     startAnimation();
 
-    window.addEventListener('resize', resizeCanvas);
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('wheel', handleWheel, { passive: true });
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    window.addEventListener('mouseout', handleMouseOut);
+    window.addEventListener("resize", resizeCanvas);
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("wheel", handleWheel, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("mouseout", handleMouseOut);
     window.addEventListener(LogoRotationEventName, handleLogoRotationStep);
-    document.addEventListener('visibilitychange', handleVisibilityChange);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
 
-    window.visualViewport?.addEventListener('resize', resizeCanvas);
+    window.visualViewport?.addEventListener("resize", resizeCanvas);
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);

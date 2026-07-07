@@ -32,9 +32,11 @@ export const FrameTolerance = 0.5;
 export const MaxDelta = 0.032;
 
 export const FixedColumns = 160;
-export const FixedRows = 44;
+export const FixedRows = 56;
 
 export const FixedCubeWidth = 20;
-export const ProjectionScale = 0.9;
+export const ProjectionScale = 1;
 
 export const BaseFontSize = 12;
+
+export const CubeScreenshotMode = true;
