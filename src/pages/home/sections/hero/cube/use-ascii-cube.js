@@ -6,7 +6,6 @@ import {
   CubeScreenshotMode,
   FixedColumns,
   FixedCubeWidth,
-  ProjectionScale,
   FixedRows,
   FrameDuration,
   FrameTolerance,
@@ -22,11 +21,12 @@ import {
   MinAngularVelocity,
   MouseInertiaDeceleration,
   MouseVelocityMemoryDamping,
+  ProjectionScale,
   ReturnAcceleration,
   ReturnDeceleration,
   ReturnMaxSpeed,
   ReturnToInitialEpsilon,
-} from "./cube-constants.js";
+} from './cube-constants.js';
 
 import {
   clamp,
@@ -879,17 +879,23 @@ export function useAsciiCube(canvasRef) {
     resizeCanvas();
 
     if (CubeScreenshotMode) {
-      drawStaticFrame();
-
-      window.addEventListener("resize", () => {
+      const drawScreenshotFrame = () => {
         resizeCanvas();
         drawStaticFrame();
-      });
+      };
+
+      const frameId = requestAnimationFrame(drawScreenshotFrame);
+
+      window.addEventListener('resize', drawScreenshotFrame);
 
       return () => {
+        cancelAnimationFrame(frameId);
+        window.removeEventListener('resize', drawScreenshotFrame);
         stopAnimation();
       };
     }
+
+    startAnimation();
 
     startAnimation();
 
