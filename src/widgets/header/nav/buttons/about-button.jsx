@@ -1,7 +1,7 @@
-import InfoIcon from '@icons/info/info-icon.jsx';
-import { aboutLink } from '@widgets/header/links.js';
-import { NavLink } from 'react-router-dom';
-import { useLanguage } from '@i18n/use-language.js';
+import InfoIcon from "@icons/info/info-icon.jsx";
+import { aboutLink } from "@widgets/header/links.js";
+import { NavLink } from "react-router-dom";
+import { useLanguage } from "@i18n/use-language.js";
 
 export default function AboutButton({onNavClick}) {
   const { t } = useLanguage();
@@ -11,7 +11,7 @@ export default function AboutButton({onNavClick}) {
     <NavLink
       to={aboutLink.to}
       className={({ isActive }) =>
-        `nav-container__button ${isActive ? 'button-selected' : ''}`
+        `nav-container__button ${isActive ? "button-selected" : ""}`
       }
       onClick={onNavClick}
     >

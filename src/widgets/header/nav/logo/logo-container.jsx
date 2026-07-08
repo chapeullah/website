@@ -1,8 +1,8 @@
-import './logo-container.css';
+import "./logo-container.css";
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
-import ChupapoLogo from '@logos/chupapo/chupapo-logo.jsx';
+import ChupapoLogo from "@logos/chupapo/chupapo-logo.jsx";
 
 const MaxSpeed = 180;
 const Acceleration = 90;
@@ -12,7 +12,7 @@ const HoverImpulseSpeed = 90;
 
 const SymmetryAngle = 180;
 
-const LogoRotationEventName = 'logo-rotation-step';
+const LogoRotationEventName = "logo-rotation-step";
 
 export default function LogoContainer() {
   const logoWrapperRef = useRef(null);
@@ -27,7 +27,7 @@ export default function LogoContainer() {
   const finishTargetRef = useRef(null);
 
   const getLogo = () => {
-    return logoWrapperRef.current?.querySelector('.logo-container__logo');
+    return logoWrapperRef.current?.querySelector(".logo-container__logo");
   };
 
   const setLogoAngle = (angle) => {

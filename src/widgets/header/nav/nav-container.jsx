@@ -12,9 +12,8 @@ export default function NavContainer({onNavClick}) {
       <LogoContainer />
       <div className="nav-divider"/>
       <HomeButton onNavClick={onNavClick} />
-      <AboutButton onNavClick={onNavClick} />
       <ProjectsButton onNavClick={onNavClick} />
+      <AboutButton onNavClick={onNavClick} />
     </nav>
   )
-  //
 }

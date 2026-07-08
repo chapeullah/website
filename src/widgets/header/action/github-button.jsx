@@ -1,6 +1,6 @@
-import GitHubLogo from '@logos/github/github-logo.jsx';
+import GitHubLogo from "@logos/github/github-logo.jsx";
 
-import { githubLink } from '@widgets/header/links.js';
+import { githubLink } from "@widgets/header/links.js";
 
 export default function ContactButton() {
   return (

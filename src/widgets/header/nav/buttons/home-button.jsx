@@ -1,7 +1,7 @@
-import HomeIcon from '@icons/home/home-icon.jsx';
-import { NavLink } from 'react-router-dom';
-import { homeLink } from '@widgets/header/links.js';
-import { useLanguage } from '@i18n/use-language.js';
+import HomeIcon from "@icons/home/home-icon.jsx";
+import { NavLink } from "react-router-dom";
+import { homeLink } from "@widgets/header/links.js";
+import { useLanguage } from "@i18n/use-language.js";
 
 export default function HomeButton({onNavClick}) {
   const { t } = useLanguage();
@@ -11,7 +11,7 @@ export default function HomeButton({onNavClick}) {
     <NavLink
       to={homeLink.to}
       className={({ isActive }) =>
-        `nav-container__button ${isActive ? 'button-selected' : ''}`
+        `nav-container__button ${isActive ? "button-selected" : ""}`
       }
       onClick={onNavClick}
     >

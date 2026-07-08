@@ -1,8 +1,9 @@
-import './action-container.css';
+import MobileMenu from "@widgets/header/action/mobile-menu/mobile-menu.jsx";
 
-import ContactButton from './contact-button.jsx';
-import GitHubButton from './github-button.jsx';
-import MobileMenu from '@widgets/header/action/mobile-menu/mobile-menu.jsx';
+import ContactButton from "./contact-button.jsx";
+import GitHubButton from "./github-button.jsx";
+
+import "./action-container.css";
 
 export default function ActionContainer() {
   return (
