@@ -1,0 +1,61 @@
+.project-card {
+  margin-block: 24px;
+
+  border: 1px solid var(--header-color-border);
+  border-radius: 4px;
+
+  background-color: var(--solid-background-tertiary);
+}
+
+.project-card__header {
+  padding-top: 16px;
+  padding-inline: 16px;
+
+  font-size: 20px;
+}
+
+.project-card__link {
+  color: var(--accent-text-primary);
+  text-decoration: none;
+}
+
+.project-card__link:hover {
+  text-decoration: underline;
+}
+
+.project-card__repo-owner {
+  font-weight: 400;
+}
+
+.project-card__repo-name {
+  font-weight: 600;
+}
+
+.project-card__menu {
+  height: 32px;
+  padding-inline: 16px;
+  margin-top: 16px;
+}
+
+.project-card__body {
+  background-color: var(--color-bg);
+
+  border-top: 1px solid var(--header-color-border);
+}
+
+.project-card__description {
+  margin: 16px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 14px;
+}
+
+.project-card__meta {
+  color: var(--color-text-secondary);
+
+  border-top: 1px solid var(--header-color-border);
+  padding: 16px;
+
+  font-size: 12px;
+}

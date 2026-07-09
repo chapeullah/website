@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import MainLayout from '../app-layout';
 
@@ -6,7 +6,7 @@ import HomePage from '@pages/home';
 import NotFoundPage from '@pages/not-found';
 import ContactPage from '@pages/contact';
 import AboutPage from '@pages/about';
-import ProjectsPage from '@pages/projects/projects-page.jsx';
+import ProjectsPage from '@pages/projects/ui/projects-page/projects-page.jsx';
 
 export default function Router() {
   return (
