@@ -1,6 +1,9 @@
+import chupapoWebsitePreview from '@assets/projects/preview-light.png'
+
 export const projects = [
   {
     id: "chupapo-website",
+    preview: chupapoWebsitePreview,
 
     owner: {
       name: "chupapo",

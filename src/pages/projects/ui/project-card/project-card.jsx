@@ -1,8 +1,15 @@
 import './project-card.css';
 
+import { useState } from 'react';
+
 export default function ProjectCard({ project }) {
+  const [selectedTab, setSelectedTab] = useState("description");
+
   return (
     <article className="project-card">
+      <p className="project-card__eyebrow">
+        Personal website
+      </p>
       <div className="project-card__header">
         <a
           href={project.owner.link}
@@ -24,20 +31,29 @@ export default function ProjectCard({ project }) {
       </div>
       <nav className="project-card__menu">
         <ul className="project-card__tabs">
-          <a className="project-card__tab">Description</a>
+          <a
+            className={
+              `project-card__tab ${selectedTab === "description" ? "project-card__tab--selected" : ""}`
+            }
+            onClick={() => setSelectedTab("description")}
+          >
+            Description
+          </a>
         </ul>
       </nav>
       <div className="project-card__body">
-        <p className="project-card__description">{project.description}</p>
+        {selectedTab === "description" && (
+          <p className="project-card__description">{project.description}</p>
+        )}
         <div className="project-card__meta">
-          <span>
-            Released on {new Intl.DateTimeFormat('en-US', {
-            month: 'long',
-            year: 'numeric',
-            day: 'numeric',
-            timeZone: 'UTC',
-          }).format(new Date(project.releaseDate))}
-          </span>
+        <span>
+          Released on {new Intl.DateTimeFormat('en-US', {
+          month: 'long',
+          year: 'numeric',
+          day: 'numeric',
+          timeZone: 'UTC',
+        }).format(new Date(project.releaseDate))}
+        </span>
         </div>
       </div>
     </article>

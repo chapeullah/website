@@ -1,5 +1,5 @@
 .projects-page {
-  height: 100svh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,5 +10,6 @@
   width: 100%;
 
   margin-inline: auto;
+  margin-top: var(--header-height);
   padding-inline: 16px;
 }
