@@ -64,10 +64,6 @@
   line-height: 1.65;
 }
 
-.experience-card__section {
-  padding-top: 20px;
-}
-
 .experience-card__section:not(:last-child) {
   margin-bottom: 24px;
 }
