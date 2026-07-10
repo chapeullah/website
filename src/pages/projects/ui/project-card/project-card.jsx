@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 import DescriptionIcon from '@icons/description-icon/description-icon.jsx';
 import MonitorIcon from '@icons/monitor/monitor-icon.jsx';
+import WebsiteIcon from '@icons/website/website-icon.jsx';
 
 export default function ProjectCard({ project }) {
   const [selectedTab, setSelectedTab] = useState("description");
@@ -25,31 +26,35 @@ export default function ProjectCard({ project }) {
     <article className="project-card">
       <p className="project-card__eyebrow">{project.eyebrow}</p>
       <div className="project-card__header">
-        <a
-          href={project.owner.link}
-          className="project-card__link project-card__repo-owner"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          {project.owner.name}
-        </a>
-        {" / "}
-        <a
-          href={project.link}
-          className="project-card__link project-card__repo-name"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          {project.title}
-        </a>
+        <WebsiteIcon className="project-card__icon" />
+        <div className="project-card__title">
+          <a
+            href={project.owner.link}
+            className="project-card__link project-card__repo-owner"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {project.owner.name}
+          </a>
+          {" / "}
+          <a
+            href={project.link}
+            className="project-card__link project-card__repo-name"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            {project.name}
+          </a>
+        </div>
       </div>
       <nav className="project-card__menu">
         <div className="project-card__tabs">
           {tabs.map((tab) => {
             const Icon = tab.icon;
-
+            
             return (
               <button
+                key={tab.id}
                 type="button"
                 className={`project-card__tab ${
                   selectedTab === tab.id ? "project-card__tab--selected" : ""
@@ -70,7 +75,7 @@ export default function ProjectCard({ project }) {
             <p className="project-card__description">{project.description}</p>
             <div className="project-card__tags">
               {project.tags.map((tag) => (
-                <article className="project-card__tag">{tag}</article>
+                <article key={tag.id} className="project-card__tag">{tag.name}</article>
               ))}
             </div>
           </>
@@ -86,14 +91,14 @@ export default function ProjectCard({ project }) {
           </div>
         )}
         <div className="project-card__meta">
-        <span className="project-card__release-date">
-          Released on {new Intl.DateTimeFormat('en-US', {
-          month: 'long',
-          year: 'numeric',
-          day: 'numeric',
-          timeZone: 'UTC',
-        }).format(new Date(project.releaseDate))}
-        </span>
+          <span className="project-card__release-date">
+            Released on {new Intl.DateTimeFormat('en-US', {
+              month: 'long',
+              year: 'numeric',
+              day: 'numeric',
+              timeZone: 'UTC',
+            }).format(new Date(project.releaseDate))}
+          </span>
         </div>
       </div>
     </article>

@@ -5,6 +5,8 @@
   border-radius: 4px;
 
   background-color: var(--solid-background-tertiary);
+
+  overflow: hidden;
 }
 
 .project-card__eyebrow {
@@ -17,9 +19,21 @@
 }
 
 .project-card__header {
+  display: flex;
+
   padding: 16px 16px 0 16px;
 
   font-size: 20px;
+}
+
+.project-card__icon {
+  color: var(--color-text-tertiary);
+
+  height: 18px;
+  width: 18px;
+
+  margin-right: 8px;
+  margin-top: 6px;
 }
 
 .project-card__link {
@@ -44,11 +58,15 @@
 
   padding: 16px 16px 0 16px;
   margin-bottom: -1px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .project-card__tabs {
   display: flex;
   gap: 4px;
+  width: max-content;
 }
 
 .project-card__tab {
@@ -116,14 +134,16 @@
 
 .project-card__tags {
   display: flex;
+  flex-wrap: wrap;
+
+  gap: 4px;
+
   padding: 8px 16px 16px 16px;
 }
 
 .project-card__tag {
   padding-inline: 10px;
   line-height: 22px;
-
-  margin-right: 4px;
 
   background-color: var(--accent-muted);
   color: var(--accent-text-primary);
@@ -142,14 +162,22 @@
 }
 
 .project-card__meta {
+  display: flex;
+
   color: var(--color-text-secondary);
 
   border-top: 1px solid var(--header-color-border);
   padding: 16px;
+
+  list-style: none;
+
+  font-size: 12px;
 }
 
 .project-card__release-date {
-  font-size: 12px;
+  margin-right: 24px;
+
+  font-size: inherit;
 }
 
 .project-card__preview {
