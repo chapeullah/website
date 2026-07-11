@@ -223,13 +223,7 @@
   display: flex;
   align-items: flex-start;
 
-  background-color: color-mix(
-      in srgb,
-      var(--solid-background-tertiary) 50%,
-      transparent
-  );
-
-  border: 1px solid var(--header-color-border);
+  background-color: var(--solid-background-tertiary);
   border-radius: 8px;
 }
 
