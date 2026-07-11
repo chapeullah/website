@@ -43,7 +43,7 @@
 
   text-align: center;
 
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
 }
 
 .technologies__list {
@@ -64,7 +64,7 @@
   align-items: center;
   gap: 12px;
 
-  padding: 8px 16px 8px 8px;
+  padding: 0;
 
   border-radius: 4px;
   background-color: var(--color-bg);
@@ -73,6 +73,20 @@
   cursor: default;
 
   overflow: hidden;
+}
+
+.technologies__card-link {
+  padding: 8px 16px 8px 8px;
+  
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: 100%;
+  height: 100%;
+
+  color: inherit;
+  text-decoration: none;
 }
 
 .technologies__card-icon {

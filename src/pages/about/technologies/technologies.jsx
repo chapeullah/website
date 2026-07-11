@@ -16,13 +16,20 @@ export default function Technologies() {
         </h3>
 
         <ul className="technologies__list">
-          {group.items.map(({ name, Icon }) => (
+          {group.items.map(({ name, Icon, href }) => (
             <li className="card technologies__card" key={name}>
-              {Icon && <Icon className="technologies__card-icon" />}
+              <a
+                className="technologies__card-link"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {Icon && <Icon className="technologies__card-icon" />}
 
-              <span className="technologies__card-label">
-                {name}
-              </span>
+                <span className="technologies__card-label">
+                  {name}
+                </span>
+              </a>
             </li>
           ))}
         </ul>
