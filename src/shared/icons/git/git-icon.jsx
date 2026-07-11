@@ -5,11 +5,12 @@ export default function GitIcon({ className = "" }) {
       viewBox="0 0 24 24"
       fill="none"
       aria-hidden="true"
+
+      strokeWidth={1.5}
     >
       <path
         d="M6.85714 19.1429V8.19048M6.85714 4.85714V8.19048M6.85714 8.19048L11.1429 12.4762H17.3333"
         stroke="currentColor"
-        strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />

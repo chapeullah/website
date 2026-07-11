@@ -4,8 +4,9 @@ export default function CppIcon({ className = "" }) {
       className={`icon cpp-icon ${className}`}
       viewBox="0 0 24 24"
       fill="none"
-      strokeWidth="1.5"
       aria-hidden="true"
+
+      strokeWidth={1.5}
     >
       <path
         d="M21 17L12 22L3 17V7L12 2L21 7V17Z"
