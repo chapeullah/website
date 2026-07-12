@@ -92,7 +92,7 @@ export default function MobileMenu() {
         </a>
 
         <NavLink
-          to="/contact"
+          to="/contacts"
           className={getLinkClassName}
           onClick={handleMenuClose}
         >

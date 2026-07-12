@@ -1,12 +1,12 @@
 import { NavLink } from 'react-router-dom';
 
 import ContactIcon from '@icons/contact/contact-icon.jsx';
-import { contactLink } from '@widgets/header/links.js';
+import { contactsLink } from '@widgets/header/links.js';
 
-export default function ContactButton({onNavClick}) {
+export default function ContactsButton({onNavClick}) {
   return (
     <NavLink
-      to={contactLink.to}
+      to={contactsLink.to}
       className={({ isActive }) =>
         `action-button ${isActive ? "button-selected" : ""}`
       }

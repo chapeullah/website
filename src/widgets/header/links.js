@@ -13,12 +13,12 @@ export const projectsLink = {
   to: "/projects",
 };
 
-export const contactLink = {
-  id: "contact",
-  to: "/contact",
+export const contactsLink = {
+  id: "contacts",
+  to: "/contacts",
 };
 
-export const githubLink = {
+export const gitHubLink = {
   id: "github",
   href: "https://github.com/chapeullah",
 };

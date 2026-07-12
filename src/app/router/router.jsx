@@ -4,9 +4,10 @@ import MainLayout from '../app-layout';
 
 import HomePage from '@pages/home';
 import NotFoundPage from '@pages/not-found';
-import ContactPage from '@pages/contact';
 import AboutPage from '@pages/about';
-import ProjectsPage from '@pages/projects/ui/projects-page/projects-page.jsx';
+import ContactsPage from '@pages/contacts';
+import ProjectsPage from '@pages/projects';
+
 
 export default function Router() {
   return (
@@ -15,7 +16,7 @@ export default function Router() {
         <Route element={<MainLayout />}>
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
-          <Route path="contact" element={<ContactPage />} />
+          <Route path="contacts" element={<ContactsPage />} />
           <Route path="projects" element={<ProjectsPage />} />
         </Route>
 

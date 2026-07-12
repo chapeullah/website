@@ -1,0 +1,130 @@
+.contact-card {
+  position: relative;
+
+  display: flex;
+  padding: 24px 48px;
+
+  place-items: center;
+
+  border-radius: var(--border-radius);
+  border: 1px solid var(--card-stroke-default);
+  box-shadow: var(--card-shadow);
+  background-color: var(--card-background-default);
+
+  cursor: pointer;
+}
+
+.contact-card:has(.contact-card__link:hover) {
+  background-color: var(--control-fill-secondary);
+}
+
+.contact-card__icon {
+  width: 100px;
+  height: 100px;
+}
+
+.contact-card__content {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  margin-left: 48px;
+  gap: 8px;
+}
+
+.contact-card__header {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+
+.contact-card__title {
+  font-size: 28px;
+}
+
+.contact-card__link {
+  z-index: 1;
+
+  position: absolute;
+  inset: 0;
+
+  border-radius: inherit;
+}
+
+.contact-card__copy-button {
+  z-index: 2;
+
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 280px;
+
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  align-items: center;
+  cursor: default;
+
+  font-family: inherit;
+
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.contact-card__value {
+  padding-inline: 12px;
+
+  height: 100%;
+  width: 100%;
+
+  text-align: start;
+  align-content: center;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  cursor: text;
+}
+
+.contact-card__copy-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  padding-inline: 8px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+
+  background-color: var(--accent-muted);
+  color: var(--accent-text-primary);
+}
+
+.contact-card__copy-button:hover .contact-card__copy-icon {
+  background-color: var(--accent-default);
+  color: var(--text-on-accent-primary);
+}
+
+.contact-card__clipboard-icon {
+  display: block;
+}
+
+.contact-card__checkmark-icon {
+  display: none;
+}
+
+.contact-card__copy-button--copied .contact-card__clipboard-icon {
+  display: none;
+}
+
+.contact-card__copy-button--copied .contact-card__checkmark-icon {
+  display: block;
+}
+
+.contact-card__description {
+  color: var(--color-text-tertiary);
+}

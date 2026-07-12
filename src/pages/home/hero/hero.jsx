@@ -13,7 +13,7 @@ export default function Hero() {
   const i18n = t.hero;
 
   return (
-    <section className="hero section" data-cube-tracking-area>
+    <section className="hero" data-cube-tracking-area>
       <div className="hero-left">
         <h1 className={'hero-left__label'}>{site.chupapo.brand}</h1>
         <p className={'hero-left__text'}>{i18n.description}</p>
