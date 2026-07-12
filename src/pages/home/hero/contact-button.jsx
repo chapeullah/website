@@ -9,7 +9,7 @@ export default function ContactButton() {
 
   return (
     <Button
-      to="/contact"
+      to="/contacts"
       variant="accent"
       className="hero__contact-button"
     >
