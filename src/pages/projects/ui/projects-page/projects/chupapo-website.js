@@ -47,5 +47,5 @@ export const chupapoWebsite = {
     },
   ],
 
-  releaseDate: "2026-06-09",
+  releaseDate: "2026-06-24",
 };
