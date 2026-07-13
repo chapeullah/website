@@ -14,7 +14,6 @@
       function getSavedTheme() {
         try {
           const theme = localStorage.getItem("theme");
-
           return ["light", "dark", "system"].includes(theme)
             ? theme
             : "system";
@@ -25,23 +24,19 @@
 
       function applyInitialTheme() {
         const selectedTheme = getSavedTheme();
-
         const appliedTheme =
           selectedTheme === "system"
             ? systemThemeQuery.matches
               ? "dark"
               : "light"
             : selectedTheme;
-
         document.documentElement.dataset.theme = appliedTheme;
         document.documentElement.style.colorScheme = appliedTheme;
-
         document.getElementById("favicon").href =
           appliedTheme === "dark"
           ? "/favicon-white.svg"
           : "/favicon-black.svg";
       }
-
       applyInitialTheme();
     </script>
     <title>Chupapo</title>
