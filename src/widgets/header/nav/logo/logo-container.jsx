@@ -1,9 +1,11 @@
 import "./logo-container.css";
 
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 import ChupapoLogo from "@logos/chupapo/chupapo-logo.jsx";
 import { LogoRotationEventName } from "@lib/brand-motion/events.js";
+import { navigation } from "@config/navigation.js";
 
 const MaxSpeed = 180;
 const Acceleration = 90;
@@ -179,8 +181,8 @@ export default function LogoContainer() {
 
   return (
     <div className="logo-container">
-      <a
-        href="/"
+      <Link
+        to={navigation.home.to}
         className="logo-container__link"
         data-cube-stop-mouse-tracking
         onMouseEnter={handleLogoEnter}
@@ -191,7 +193,7 @@ export default function LogoContainer() {
         </span>
 
         <h1 className="logo-container__title">Chupapo</h1>
-      </a>
+      </Link>
     </div>
   );
 }

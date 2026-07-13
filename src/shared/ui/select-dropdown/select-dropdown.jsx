@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 import "./select-dropdown.css";
 
-import CaretIcon from "../icons/caret-icon.jsx";
+import CaretIcon from "./caret-icon.jsx";
 
 export default function SelectDropdown({
   items,
@@ -15,8 +15,7 @@ export default function SelectDropdown({
   const dropdownRef = useRef(null);
 
   const currentItem =
-    items.find((item) => item.code === selectedCode) ||
-    items[0];
+    items.find((item) => item.code === selectedCode) || items[0];
 
   useEffect(() => {
     function handlePointerDown(event) {
@@ -46,27 +45,22 @@ export default function SelectDropdown({
   }
 
   function handleButtonClick() {
-    setIsOpen((prev) => !prev);
+    setIsOpen((previousValue) => !previousValue);
   }
 
   return (
-    <div
-      ref={dropdownRef}
-      className="select-dropdown"
-    >
+    <div ref={dropdownRef} className="select-dropdown">
       <button
         type="button"
         className="select-dropdown__button"
         aria-label={ariaLabel}
         aria-expanded={isOpen}
+        aria-haspopup="listbox"
         onClick={handleButtonClick}
       >
         {icon}
 
-        <span className="select-dropdown__label">
-          {currentItem.label}
-        </span>
-
+        <span className="select-dropdown__label">{currentItem.label}</span>
         <CaretIcon className="select-dropdown__caret" />
       </button>
 
@@ -74,14 +68,17 @@ export default function SelectDropdown({
         <div className="select-dropdown__menu">
           <div className="select-dropdown__menu-caret" />
 
-          <ul className="select-dropdown__list">
+          <ul className="select-dropdown__list" role="listbox">
             {items.map((item) => (
               <li
                 className="select-dropdown__item"
                 key={item.code}
+                role="none"
               >
                 <button
                   type="button"
+                  role="option"
+                  aria-selected={item.code === selectedCode}
                   className={
                     item.code === selectedCode
                       ? "select-dropdown__option select-dropdown__option--active"

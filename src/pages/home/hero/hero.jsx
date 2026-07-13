@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="hero-left">
         <h1 className={"hero-left__label"}>{site.chupapo.brand}</h1>
         <p className={"hero-left__text"}>{i18n.description}</p>
-        <div className={"buttons-spacer"}>
+        <div className="hero-buttons">
           <ContactButton />
           <GitHubButton />
         </div>

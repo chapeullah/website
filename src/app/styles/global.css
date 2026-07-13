@@ -15,7 +15,6 @@
   color-scheme: light;
 
   background: var(--page-color-bg);
-
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -32,10 +31,4 @@ body {
   font-family: var(--font), sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text-primary);
-}
-
-#product,
-#about,
-#contacts {
-  scroll-margin-top: var(--header-height);
 }

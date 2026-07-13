@@ -3,19 +3,6 @@
   padding-block: var(--block-spacing-default);
 }
 
-.section-layout__split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.section-layout__split-left {
-  grid-column: 1;
-}
-
-.section-layout__split-right {
-  grid-column: 2;
-}
-
 .section-layout__title {
   font-size: 50px;
   font-weight: 600;

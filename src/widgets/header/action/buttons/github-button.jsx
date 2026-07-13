@@ -1,11 +1,10 @@
 import GitHubLogo from "@logos/github/github-logo.jsx";
-import { gitHubLink } from "@widgets/header/links.js";
 import { site } from "@config/site.js";
 
 export default function GitHubButton() {
   return (
     <a
-      href={gitHubLink.href}
+      href={site.contacts.github.link}
       className="action-button"
       aria-label={site.contacts.github.label}
       target="_blank"

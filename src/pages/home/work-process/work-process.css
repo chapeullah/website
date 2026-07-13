@@ -312,3 +312,10 @@
     gap: 24px;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .work-process__gradient {
+    animation: none;
+    will-change: auto;
+  }
+}

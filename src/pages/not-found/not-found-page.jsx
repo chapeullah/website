@@ -3,6 +3,7 @@ import "./not-found-page.css";
 import { useLanguage } from "@i18n/use-language.js";
 import Button from "@ui/button/index.js";
 import HomeIcon from "@icons/home/home-icon.jsx";
+import { navigation } from "@config/navigation.js";
 
 export default function NotFoundPage() {
   const { t } = useLanguage();
@@ -14,7 +15,7 @@ export default function NotFoundPage() {
         <span className="not-found-page__label">404</span>
         <span className="not-found-page__title">{i18n.title}</span>
         <Button
-          to="/"
+          to={navigation.home.to}
           className="go-home-button"
           variant="default"
         >

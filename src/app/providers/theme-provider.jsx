@@ -1,7 +1,7 @@
 import { ThemeContext } from "@theme/theme-context.jsx";
 
 import { DefaultThemeName, Themes, ThemeStorageKey, } from "@theme/themes.js";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 function getSystemTheme() {
   return window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -39,9 +39,19 @@ export default function ThemeProvider({ children }) {
     };
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.documentElement.dataset.theme = appliedTheme;
+    document.documentElement.style.colorScheme = appliedTheme;
     localStorage.setItem(ThemeStorageKey, theme);
+
+    const favicon = document.getElementById("favicon");
+
+    if (favicon) {
+      favicon.href =
+        appliedTheme === "dark"
+          ? "/favicon-white.svg"
+          : "/favicon-black.svg";
+    }
   }, [theme, appliedTheme]);
 
   const setTheme = (nextTheme) => {

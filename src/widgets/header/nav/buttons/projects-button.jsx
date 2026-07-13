@@ -1,20 +1,19 @@
 import { NavLink } from "react-router-dom";
 
 import { useLanguage } from "@i18n/use-language.js";
-import { projectsLink } from "@widgets/header/links.js";
+import { navigation } from "@config/navigation.js";
 import FileIcon from "@icons/file/file-icon.jsx";
 
-export default function ProjectsButton({onNavClick}) {
+export default function ProjectsButton() {
   const { t } = useLanguage();
   const i18n = t.header;
 
   return (
     <NavLink
-      to={projectsLink.to}
+      to={navigation.projects.to}
       className={({ isActive }) =>
         `nav-container__button ${isActive ? "button-selected" : ""}`
       }
-      onClick={onNavClick}
     >
       <FileIcon className="nav-container__button-icon" />
       <span className="nav-container__button-text">

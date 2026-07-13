@@ -6,14 +6,14 @@ import ProjectsButton from "@widgets/header/nav/buttons/projects-button.jsx";
 
 import LogoContainer from "./logo/logo-container.jsx";
 
-export default function NavContainer({onNavClick}) {
+export default function NavContainer() {
   return (
     <nav className="nav-container">
       <LogoContainer />
       <div className="nav-divider"/>
-      <HomeButton onNavClick={onNavClick} />
-      <ProjectsButton onNavClick={onNavClick} />
-      <AboutButton onNavClick={onNavClick} />
+      <HomeButton />
+      <ProjectsButton />
+      <AboutButton />
     </nav>
   )
 }

@@ -16,10 +16,10 @@ export default function GitHubButton() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <GitHubLogo className="button__icon" />
-      <div className="button__wrapper">
-        <h5 className={"button__label"}>{site.contacts.github.label}</h5>
-        <p className={"button__title"}>{i18n.github.subtitle}</p>
+      <GitHubLogo className="hero-button__icon" />
+      <div className="hero-button__wrapper">
+        <h5 className="hero-button__label">{site.contacts.github.label}</h5>
+        <p className="hero-button__title">{i18n.github.subtitle}</p>
       </div>
     </Button>
   );

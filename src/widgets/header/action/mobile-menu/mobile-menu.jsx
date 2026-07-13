@@ -8,6 +8,7 @@ import HomeIcon from "@icons/home/home-icon.jsx";
 import GitHubLogo from "@logos/github/github-logo.jsx";
 import Divider from "@ui/divider/divider.jsx";
 import { useLanguage } from "@i18n/use-language.js";
+import { navigation } from "@config/navigation.js";
 import { site } from "@config/site.js";
 
 export default function MobileMenu() {
@@ -49,8 +50,8 @@ export default function MobileMenu() {
         }`}
       >
         <NavLink
-          to="/"
-          end
+          to={navigation.home.to}
+          end={navigation.home.end}
           className={getLinkClassName}
           onClick={handleMenuClose}
         >
@@ -59,7 +60,7 @@ export default function MobileMenu() {
         </NavLink>
 
         <NavLink
-          to="/projects"
+          to={navigation.projects.to}
           className={getLinkClassName}
           onClick={handleMenuClose}
         >
@@ -68,7 +69,7 @@ export default function MobileMenu() {
         </NavLink>
 
         <NavLink
-          to="/about"
+          to={navigation.about.to}
           className={getLinkClassName}
           onClick={handleMenuClose}
         >
@@ -92,7 +93,7 @@ export default function MobileMenu() {
         </a>
 
         <NavLink
-          to="/contacts"
+          to={navigation.contacts.to}
           className={getLinkClassName}
           onClick={handleMenuClose}
         >
