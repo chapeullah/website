@@ -153,7 +153,6 @@
     grid-template-columns: max-content;
     grid-auto-rows: 1fr;
     justify-content: start;
-    gap: 8px;
   }
 
   .contact-card__title {
@@ -163,12 +162,22 @@
   .contact-card__copy-button {
     height: auto;
   }
+
+  .contact-card__description {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
-  .contact-card {
-    flex-direction: column;
-    gap: 24px;
-    padding: 24px 24px;
+  .contact-card__copy-button {
+    display: none;
+  }
+
+  .contact-card__description {
+    display: none;
+  }
+
+  .contact-card__title {
+    font-size: 28px;
   }
 }

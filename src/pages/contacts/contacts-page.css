@@ -20,6 +20,8 @@
   text-align: center;
 
   font-weight: 600;
+
+  margin-top: 16px;
 }
 
 .contacts-page__contacts {
@@ -27,4 +29,10 @@
   flex-direction: column;
 
   gap: 16px;
+}
+
+@media (max-width: 480px) {
+  .contacts-page {
+    padding-top: var(--header-height);
+  }
 }
