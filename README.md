@@ -19,7 +19,7 @@ This repository contains the source code for Chupapo website, created to present
 ## Features
 
 - Single-page application with multiple client-side routes
-- Responsive design
+- Responsive design for mobile and desktop
 - Light and dark theme support
 - Multi-language localization
 - [Feature-Sliced Design](https://fsd.how) architecture
