@@ -3,13 +3,16 @@ export const contacts = {
 
   items: {
     gmail: {
-      description: "Send me an email with project details, collaboration proposals, or any questions.",
+      description:
+        "Send project requirements, technical specifications, reference materials, or collaboration proposals that require a detailed response.",
     },
     telegram: {
-      description: "Message me on Telegram for a quick conversation about your project or idea.",
+      description:
+        "Suitable for quick questions, discussing project details, receiving an initial estimate, and staying in touch during development.",
     },
     max: {
-      description: "Contact me on MAX to discuss your project or collaboration opportunities, or to ask a question.",
+      description:
+        "An alternative messenger for discussing project details, sharing updates, and maintaining ongoing communication.",
     },
   }
 };

@@ -5,5 +5,5 @@ export const Languages = [
 
 export const AvailableLanguageCodes = Languages.map((language) => language.code);
 
-export const DefaultLanguageCode = "ru";
+export const DefaultLanguageCode = "en";
 export const LanguageStorageKey = "language";
