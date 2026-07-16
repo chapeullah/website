@@ -1,8 +1,6 @@
-<h1 align="center">
-  Chupapo Website
-</h1>
+#  Chupapo Website
 
-<p align="center">
+<p>
   <a href="https://chupapo.com/">chupapo.com</a>
 </p>
 
