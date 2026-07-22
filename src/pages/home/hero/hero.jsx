@@ -2,7 +2,7 @@ import Cube from "./cube/cube.jsx";
 
 import "./hero.css";
 
-import ContactButton from "./contact-button.jsx";
+import ContactButton from "./contacts-button.jsx";
 import GitHubButton from "./github-button.jsx";
 import { useLanguage } from "@i18n/use-language.js";
 
